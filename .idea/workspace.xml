@@ -2,50 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b72a4418-c83a-4179-8543-ecd455588aac" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/model/ResAbsenteeism.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/countries_region.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/chonnguyen/learning/model/ResLifeLoss.class" afterPath="$PROJECT_DIR$/target/classes/org/chonnguyen/learning/model/ResLifeLoss.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/chonnguyen/learning/test/GenerateDummyDataForGB19183.class" afterPath="$PROJECT_DIR$/target/classes/org/chonnguyen/learning/test/GenerateDummyDataForGB19183.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axonactive/f_apply/FunctionDemo.java" afterPath="$PROJECT_DIR$/src/main/java/com/axonactive/f_apply/FunctionDemo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axonactive/f_apply/Student.java" afterPath="$PROJECT_DIR$/src/main/java/com/axonactive/f_apply/Student.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axonactive/fs/DistinctByKey.java" afterPath="$PROJECT_DIR$/src/main/java/com/axonactive/fs/DistinctByKey.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axonactive/model/Name.java" afterPath="$PROJECT_DIR$/src/main/java/com/axonactive/model/Name.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axonactive/model/Pathogen.java" afterPath="$PROJECT_DIR$/src/main/java/com/axonactive/model/Pathogen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axonactive/model/PathogenDTO.java" afterPath="$PROJECT_DIR$/src/main/java/com/axonactive/model/PathogenDTO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axonactive/model/PathogenInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/axonactive/model/PathogenInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axonactive/model/PathogenReportsDTO.java" afterPath="$PROJECT_DIR$/src/main/java/com/axonactive/model/PathogenReportsDTO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axonactive/model/QueryEventDTO.java" afterPath="$PROJECT_DIR$/src/main/java/com/axonactive/model/QueryEventDTO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axonactive/model/QueryPathogenDTO.java" afterPath="$PROJECT_DIR$/src/main/java/com/axonactive/model/QueryPathogenDTO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axonactive/test/DateTimeTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/axonactive/test/DateTimeTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axonactive/test/DistinctByCondition.java" afterPath="$PROJECT_DIR$/src/main/java/com/axonactive/test/DistinctByCondition.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axonactive/test/PathogenIntersection.java" afterPath="$PROJECT_DIR$/src/main/java/com/axonactive/test/PathogenIntersection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axonactive/test/RandomStringCheck.java" afterPath="$PROJECT_DIR$/src/main/java/com/axonactive/test/RandomStringCheck.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axonactive/test/ReflectionTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/axonactive/test/ReflectionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axonactive/test/SortPathogen.java" afterPath="$PROJECT_DIR$/src/main/java/com/axonactive/test/SortPathogen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axonactive/test/SortPathogenDTO.java" afterPath="$PROJECT_DIR$/src/main/java/com/axonactive/test/SortPathogenDTO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axonactive/test/SortPathogenDTOByName.java" afterPath="$PROJECT_DIR$/src/main/java/com/axonactive/test/SortPathogenDTOByName.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axonactive/test/SortQueryEventDTO.java" afterPath="$PROJECT_DIR$/src/main/java/com/axonactive/test/SortQueryEventDTO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axonactive/test/SortTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/axonactive/test/SortTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axonactive/test/TestDistinctDTO.java" afterPath="$PROJECT_DIR$/src/main/java/com/axonactive/test/TestDistinctDTO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axonactive/test/TestSet.java" afterPath="$PROJECT_DIR$/src/main/java/com/axonactive/test/TestSet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axonactive/utils/GenPathogenFile.java" afterPath="$PROJECT_DIR$/src/main/java/com/axonactive/utils/GenPathogenFile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axonactive/utils/ParseCSV.java" afterPath="$PROJECT_DIR$/src/main/java/com/axonactive/utils/ParseCSV.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axonactive/utils/RandomObjectFiller.java" afterPath="$PROJECT_DIR$/src/main/java/com/axonactive/utils/RandomObjectFiller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axonactive/utils/VietFuckingLot.java" afterPath="$PROJECT_DIR$/src/main/java/com/axonactive/utils/VietFuckingLot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/model/Countries.java" afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/model/Countries.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/model/Country.java" afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/model/Country.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/model/ResDemographic.java" afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/model/ResDemographic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/model/ResEpicurve.java" afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/model/ResEpicurve.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/model/ResLifeLoss.java" afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/model/ResLifeLoss.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/model/State.java" afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/model/State.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/test/DateTest.java" afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/test/DateTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/test/GenerateDummyDataForGB19183.java" afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/test/GenerateDummyDataForGB19183.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/test/Item.java" afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/test/Item.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/test/Java8Examples3.java" afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/test/Java8Examples3.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/test/ParallelSortTest.java" afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/test/ParallelSortTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/test/Utils.java" afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/test/Utils.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -1276,7 +1235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496818842313</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Remove header file">
+      <created>1496833185656</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1496833185656</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1321,7 +1287,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Change to ChonNguyen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change to ChonNguyen" />
+    <MESSAGE value="Remove header file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove header file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
