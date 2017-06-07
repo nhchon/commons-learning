@@ -7,30 +7,21 @@
  *  material, in whole or in part, is strictly forbidden unless prior
  *  written permission is obtained from ChonNguyen Incorporated.
  *************************************************************************/
-package com.axonactive.test;
+package org.chonnguyen.learning.model;
 
-import org.apache.commons.lang3.StringUtils;
+import java.util.List;
 
 /**
- * Created by nhchon on 3/23/2017 2:00 PM.
+ * Created by nhchon on 6/7/2017 9:38 AM.
  */
-public class SortTest {
-    public  static void main(String args[]){
-        String sort = "";
-        System.out.println(ham(sort));
+public class Countries {
+    private List<Country> countries;
 
-        sort = "cases";
-        System.out.println(ham(sort));
-
-        sort = "+a";
-        System.out.println(ham(sort));
-
-        sort = "-a";
-        System.out.println(ham(sort));
+    public List<Country> getCountries() {
+        return countries;
     }
 
-    public static boolean ham(String sort){
-        return !(StringUtils.isEmpty(sort) || sort.startsWith("-"));
+    public void setCountries(List<Country> countries) {
+        this.countries = countries;
     }
-
 }

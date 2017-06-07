@@ -1,18 +1,25 @@
 /*************************************************************************
- *  Copyright (c) Metabiota Incorporated - All Rights Reserved
+ *  Copyright (c) ChonNguyen Incorporated - All Rights Reserved
  *------------------------------------------------------------------------
- *  This material is proprietary to Metabiota Incorporated. The
+ *  This material is proprietary to ChonNguyen Incorporated. The
  *  intellectual and technical concepts contained herein are proprietary
- *  to Metabiota Incorporated. Reproduction or distribution of this
+ *  to ChonNguyen Incorporated. Reproduction or distribution of this
  *  material, in whole or in part, is strictly forbidden unless prior
- *  written permission is obtained from Metabiota Incorporated.
+ *  written permission is obtained from ChonNguyen Incorporated.
  *************************************************************************/
 package org.chonnguyen.learning.test;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.lang3.RandomUtils;
+import org.chonnguyen.learning.model.Countries;
+import org.chonnguyen.learning.model.Country;
+import org.chonnguyen.learning.model.ResEpicurve;
 import org.chonnguyen.learning.model.ResLifeLoss;
 
 import java.io.*;
+import java.net.URL;
 import java.util.*;
 
 /**
@@ -20,16 +27,76 @@ import java.util.*;
  */
 public class GenerateDummyDataForGB19183 {
     public static final String GLOBAL = "Global";
+
+    //
     public static final String LIFE_LOSS_CSV_HEADR = "EVENT_ID,LIFE_LOSS,LOCATION,LOCATION_LEVEL,POPULATION," +
             "SECTOR_1_ABSENT,SECTOR_2_ABSENT,SECTOR_3_ABSENT,SECTOR_4_ABSENT,SECTOR_5_ABSENT,SECTOR_6_ABSENT,TOTAL_ABSENT,STATE";
-    public static final String LIFE_LOSS_CSV_FILE_PATH = "D:\\Metabiota-Docs\\RES-Dummy-Data\\AutoGenerate\\RES_LIFE_LOSS_DATA_Auto.csv";
+    public static final String LIFE_LOSS_CSV_FILE_PATH = "D:\\ChonNguyen-Docs\\RES-Dummy-Data\\AutoGenerate\\RES_LIFE_LOSS_DATA_Auto.csv";
+
+    public static final String RES_EPICURVE_DATA_CSV_HEADR = "EVENT_ID,LOCATION,COUNTRY_CODE,STATE,LOCATION_LEVEL,DAY,INFECTED,HOSP,DEATHS";
+    public static final String RES_EPICURVE_DATA_CSV_FILE_PATH = "D:\\ChonNguyen-Docs\\RES-Dummy-Data\\AutoGenerate\\RES_EPICURVE_DATA_Auto.csv";
+
+    // RES_DEMOGRAPHIC_DATA
+    public static final String RES_DEMOGRAPHIC_DATA_CSV_HEADR = "EVENT_ID,LOCATION,LOCATION_LEVEL,GENDER,AGE,INFECTED,HOSP,DEATHS,STATE";
+    public static final String RES_DEMOGRAPHIC_DATA_CSV_FILE_PATH = "D:\\ChonNguyen-Docs\\RES-Dummy-Data\\AutoGenerate\\RES_DEMOGRAPHIC_DATA_Auto.csv";
+
+    public static Map<Integer, String> countries;
+    public static Map<Integer, String> states;
+    public static int START_EVENT_ID = 100;
+    public static int NUM_OF_EVENT = 50;
 
     public static void main(String[] args) throws Exception{
-        Map<Integer, String> countries = getListCountryCode();
-        Map<Integer, String> states = getStateCode();
+        countries = getListCountryCode();
+        states = getStateCode();
+
+        List<ResLifeLoss> resLifeLosses = new ArrayList<>();
+        List<ResEpicurve> resEpicurves = new ArrayList<>();
+        for(int eventId = START_EVENT_ID; eventId <= START_EVENT_ID + 50; eventId++) {
+            int locationLevel = RandomUtils.nextInt(0, 3); // range 0 - 2
+            String location = locationLevel == 0 ? GLOBAL : (locationLevel == 2 ? "US" : countries.get(RandomUtils.nextInt(0, countries.keySet().size())));
+            String state = location.equals("US") ? states.get(RandomUtils.nextInt(0, states.keySet().size())) : null;
+
+            // RES_LIFE_LOSS_DATA
+            ResLifeLoss r = generateResLifeLossModel(eventId, location, locationLevel+"", state);
+            resLifeLosses.add(r);
+            //System.out.println(r);
+
+            // RES_EPICURVE_DATA
+            ResEpicurve resEpicurve = generateResEpicurveData(eventId + "", location, locationLevel+"", state);
+            resEpicurves.add(resEpicurve);
+            System.out.println(resEpicurve);
+        }
+
 
         // Generate life loss sample data
-        int startEventId = 100;
+        writeLifeLossFile(resLifeLosses);
+
+        // create file RES_EPICURVE_DATA.csv
+        writeFile(resEpicurves, RES_EPICURVE_DATA_CSV_HEADR, RES_EPICURVE_DATA_CSV_FILE_PATH);
+    }
+
+    public static ResEpicurve generateResEpicurveData(String eventId, String location, String locationLevel, String state) {
+        ResEpicurve rEpi = new ResEpicurve();
+        rEpi.setEventId(eventId);
+        rEpi.setLocation(location);
+        rEpi.setCountryCode(location);
+        rEpi.setLocationLevel(locationLevel);
+        rEpi.setState(state);
+
+        rEpi.setDay(Utils.getRandomDateOfBirth());
+        rEpi.setInfected(RandomUtils.nextLong(0, 2000000));
+        rEpi.setHospitalized(RandomUtils.nextLong(0, 2000000));
+        rEpi.setDeaths(RandomUtils.nextLong(0, 2000000));
+
+        return rEpi;
+    }
+
+    /**
+     *
+     * @throws Exception
+     */
+    public static void generateResLifeLossData() throws Exception {
+        int startEventId = START_EVENT_ID;
         List<ResLifeLoss> rs = new ArrayList<>();
         for(int i = startEventId; i <= startEventId + 50; i++) {
             int locationLevel = RandomUtils.nextInt(0, 3); // range 0 - 2
@@ -44,6 +111,26 @@ public class GenerateDummyDataForGB19183 {
         writeLifeLossFile(rs);
     }
 
+    public static <T extends Object> void writeFile(List<T> objs, String csvHeaderLine, String fileName) throws Exception {
+        File fout = new File(fileName);
+        try (
+                FileOutputStream fos = new FileOutputStream(fout);
+                BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
+        ) {
+            bw.write(csvHeaderLine);
+            bw.newLine();
+            for(T r : objs) {
+                bw.write(r.toString());
+                bw.newLine();
+            }
+        }
+    }
+
+    /**
+     *
+     * @param rs
+     * @throws IOException
+     */
     public static void writeLifeLossFile(List<ResLifeLoss> rs) throws IOException {
         File fout = new File(LIFE_LOSS_CSV_FILE_PATH);
         try (
@@ -58,6 +145,28 @@ public class GenerateDummyDataForGB19183 {
             }
         }
     }
+
+    public static ResLifeLoss generateResLifeLossModel(int eventId, String location, String locationLevel, String state) {
+        ResLifeLoss r = new ResLifeLoss();
+        r.setEventId(eventId);
+        r.setLocation(location);
+        r.setLocationLevel(locationLevel);
+        r.setState(state);
+
+        r.setPopulation(RandomUtils.nextInt());
+        r.setLifeLoss(RandomUtils.nextInt());
+
+        r.setTotalAbsent(RandomUtils.nextDouble(0, 1));
+        r.setSector1Absent(RandomUtils.nextDouble(0, 1));
+        r.setSector2Absent(RandomUtils.nextDouble(0, 1));
+        r.setSector3Absent(RandomUtils.nextDouble(0, 1));
+        r.setSector4Absent(RandomUtils.nextDouble(0, 1));
+        r.setSector5Absent(RandomUtils.nextDouble(0, 1));
+        r.setSector6Absent(RandomUtils.nextDouble(0, 1));
+
+        return r;
+    }
+
     public static Map<Integer, String> getListCountryCode() {
         int count = 0;
         Map<Integer, String> countries = new HashMap<>();
@@ -146,28 +255,4 @@ public class GenerateDummyDataForGB19183 {
         return states;
     }
 
-    public static void generateResLifeLossData() {
-
-    }
-
-    public static ResLifeLoss generateResLifeLossModel(int eventId, String location, String locationLevel, String state) {
-        ResLifeLoss r = new ResLifeLoss();
-        r.setEventId(eventId);
-        r.setLocation(location);
-        r.setLocationLevel(locationLevel);
-        r.setState(state);
-
-        r.setPopulation(RandomUtils.nextInt());
-        r.setLifeLoss(RandomUtils.nextInt());
-
-        r.setTotalAbsent(RandomUtils.nextDouble(0, 1));
-        r.setSector1Absent(RandomUtils.nextDouble(0, 1));
-        r.setSector2Absent(RandomUtils.nextDouble(0, 1));
-        r.setSector3Absent(RandomUtils.nextDouble(0, 1));
-        r.setSector4Absent(RandomUtils.nextDouble(0, 1));
-        r.setSector5Absent(RandomUtils.nextDouble(0, 1));
-        r.setSector6Absent(RandomUtils.nextDouble(0, 1));
-
-        return r;
-    }
 }

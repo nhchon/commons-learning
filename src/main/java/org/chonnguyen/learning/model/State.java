@@ -7,19 +7,21 @@
  *  material, in whole or in part, is strictly forbidden unless prior
  *  written permission is obtained from ChonNguyen Incorporated.
  *************************************************************************/
-package com.axonactive.model;
+package org.chonnguyen.learning.model;
 
 /**
- * Created by nhchon on 3/1/2017 10:26 AM.
+ * Created by nhchon on 6/7/2017 9:26 AM.
  */
-public class QueryPathogenDTO {
+public class State {
+    private String code;
     private String name;
 
-    public QueryPathogenDTO(){
+    public String getCode() {
+        return code;
     }
 
-    public QueryPathogenDTO(String name){
-        this.name = name;
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public String getName() {
@@ -28,22 +30,5 @@ public class QueryPathogenDTO {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    @Override
-    public String toString(){
-        return "[ " + name + "]";
-    }
-
-    @Override
-    public boolean equals(Object q2){
-        QueryPathogenDTO q22 = (QueryPathogenDTO) q2;
-
-        return q22.getName().equals(this.name);
-    }
-
-    @Override
-    public int hashCode(){
-        return this.name.hashCode();
     }
 }

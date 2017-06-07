@@ -1,11 +1,11 @@
 /*************************************************************************
- *  Copyright (c) Metabiota Incorporated - All Rights Reserved
+ *  Copyright (c) ChonNguyen Incorporated - All Rights Reserved
  *------------------------------------------------------------------------
- *  This material is proprietary to Metabiota Incorporated. The
+ *  This material is proprietary to ChonNguyen Incorporated. The
  *  intellectual and technical concepts contained herein are proprietary
- *  to Metabiota Incorporated. Reproduction or distribution of this
+ *  to ChonNguyen Incorporated. Reproduction or distribution of this
  *  material, in whole or in part, is strictly forbidden unless prior
- *  written permission is obtained from Metabiota Incorporated.
+ *  written permission is obtained from ChonNguyen Incorporated.
  *************************************************************************/
 package com.axonactive.test;
 
@@ -81,10 +81,10 @@ public class SortQueryEventDTO {
         //l.add(new QueryEventDTO(1175385600000L, 1184371200000L, 108, 0, "FM", "Federated States of Micronesia", "Zika virus", "WHO DON"));
         //l.add(new QueryEventDTO(1175385600000L, 1184371200000L, 108, 0, "FM", "Federated States of Micronesia", "Zika virus", "WHO DON"));
         //l.add(new QueryEventDTO(1175385600000L, 1184371200000L, 108, 0, "FM", "Federated States of Micronesia", "Zika virus", "[Geographic] Centre for hygiene and public health"));
-        //l.add(new QueryEventDTO(1175385600000L, 1184371200000L, 108, 0, "FM", "Federated States of Micronesia", "Zika virus", "Metabiota Best"));
-        //l.add(new QueryEventDTO(1175385600000L, 1184371200000L, 108, 0, "FM", "Federated States of Micronesia", "Zika virus", "Metabiota Best"));
-        //l.add(new QueryEventDTO(1175385600000L, 1184371200000L, 108, 0, "FM", "Federated States of Micronesia", "Zika virus", "Metabiota Best"));
-        //l.add(new QueryEventDTO(1175385600000L, 1184371200000L, 108, 0, "FM", "Federated States of Micronesia", "Zika virus", "Metabiota Best (NRT)"));
+        //l.add(new QueryEventDTO(1175385600000L, 1184371200000L, 108, 0, "FM", "Federated States of Micronesia", "Zika virus", "ChonNguyen Best"));
+        //l.add(new QueryEventDTO(1175385600000L, 1184371200000L, 108, 0, "FM", "Federated States of Micronesia", "Zika virus", "ChonNguyen Best"));
+        //l.add(new QueryEventDTO(1175385600000L, 1184371200000L, 108, 0, "FM", "Federated States of Micronesia", "Zika virus", "ChonNguyen Best"));
+        //l.add(new QueryEventDTO(1175385600000L, 1184371200000L, 108, 0, "FM", "Federated States of Micronesia", "Zika virus", "ChonNguyen Best (NRT)"));
 
         for(int i=0; i<100; i++) {
             l.add(genData.createAndFill(QueryEventDTO.class));
@@ -194,10 +194,10 @@ public class SortQueryEventDTO {
         //l.add(new QueryEventDTO(1175385600000L, 1184371200000L, 108, 0, "FM", "Federated States of Micronesia", "Zika virus", "WHO DON"));
         //l.add(new QueryEventDTO(1175385600000L, 1184371200000L, 108, 0, "FM", "Federated States of Micronesia", "Zika virus", "WHO DON"));
         //l.add(new QueryEventDTO(1175385600000L, 1184371200000L, 108, 0, "FM", "Federated States of Micronesia", "Zika virus", "[Geographic] Centre for hygiene and public health"));
-        //l.add(new QueryEventDTO(1175385600000L, 1184371200000L, 108, 0, "FM", "Federated States of Micronesia", "Zika virus", "Metabiota Best"));
-        //l.add(new QueryEventDTO(1175385600000L, 1184371200000L, 108, 0, "FM", "Federated States of Micronesia", "Zika virus", "Metabiota Best"));
-        //l.add(new QueryEventDTO(1175385600000L, 1184371200000L, 108, 0, "FM", "Federated States of Micronesia", "Zika virus", "Metabiota Best"));
-        //l.add(new QueryEventDTO(1175385600000L, 1184371200000L, 108, 0, "FM", "Federated States of Micronesia", "Zika virus", "Metabiota Best (NRT)"));
+        //l.add(new QueryEventDTO(1175385600000L, 1184371200000L, 108, 0, "FM", "Federated States of Micronesia", "Zika virus", "ChonNguyen Best"));
+        //l.add(new QueryEventDTO(1175385600000L, 1184371200000L, 108, 0, "FM", "Federated States of Micronesia", "Zika virus", "ChonNguyen Best"));
+        //l.add(new QueryEventDTO(1175385600000L, 1184371200000L, 108, 0, "FM", "Federated States of Micronesia", "Zika virus", "ChonNguyen Best"));
+        //l.add(new QueryEventDTO(1175385600000L, 1184371200000L, 108, 0, "FM", "Federated States of Micronesia", "Zika virus", "ChonNguyen Best (NRT)"));
 
         System.out.println("TEST Perormance between Arrays.parallelSort and Stream.parallelStream : 1000000 elements");
         System.out.println("Generate 1000000 elements ... ");
