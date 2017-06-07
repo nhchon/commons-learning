@@ -1,12 +1,3 @@
-/*************************************************************************
- *  Copyright (c) ChonNguyen Incorporated - All Rights Reserved
- *------------------------------------------------------------------------
- *  This material is proprietary to ChonNguyen Incorporated. The
- *  intellectual and technical concepts contained herein are proprietary
- *  to ChonNguyen Incorporated. Reproduction or distribution of this
- *  material, in whole or in part, is strictly forbidden unless prior
- *  written permission is obtained from ChonNguyen Incorporated.
- *************************************************************************/
 package org.chonnguyen.learning.model;
 
 import java.text.DecimalFormat;
@@ -16,7 +7,7 @@ import java.text.NumberFormat;
  * Created by nhchon on 6/6/2017 4:19 PM.
  */
 public class ResLifeLoss {
-    private int eventId;
+    private String eventId;
     private String location;
     private String locationLevel;
     private long population;
@@ -63,11 +54,11 @@ public class ResLifeLoss {
         return b.toString();
     }
 
-    public int getEventId() {
+    public String getEventId() {
         return eventId;
     }
 
-    public void setEventId(int eventId) {
+    public void setEventId(String eventId) {
         this.eventId = eventId;
     }
 

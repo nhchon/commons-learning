@@ -1,15 +1,5 @@
 package com.axonactive.model;
 
-/*************************************************************************
- * Copyright (c) ChonNguyen Incorporated - All Rights Reserved
- * ------------------------------------------------------------------------
- * This material is proprietary to ChonNguyen Incorporated. The
- * intellectual and technical concepts contained herein are proprietary
- * to ChonNguyen Incorporated. Reproduction or distribution of this
- * material, in whole or in part, is strictly forbidden unless prior
- * written permission is obtained from ChonNguyen Incorporated.
- *************************************************************************/
-
 import java.util.Date;
 import java.util.List;
 
