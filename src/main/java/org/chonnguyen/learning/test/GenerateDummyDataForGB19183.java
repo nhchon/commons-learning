@@ -49,7 +49,7 @@ public class GenerateDummyDataForGB19183 {
             String eventId = RandomUtils.nextInt(1, 11) + ""; // 1 - 10
             int locationLevel = RandomUtils.nextInt(0, 3); // range 0 - 2
             String location = locationLevel == 0 ? GLOBAL : (locationLevel == 2 ? "US" : countries.get(RandomUtils.nextInt(0, countries.keySet().size())));
-            String state = location.equals("US") ? states.get(RandomUtils.nextInt(0, states.keySet().size())) : null;
+            String state = (location.equals("US") && locationLevel == 2) ? states.get(RandomUtils.nextInt(0, states.keySet().size())) : null;
 
             // RES_LIFE_LOSS_DATA
             ResLifeLoss r = generateResLifeLossModel(eventId, location, locationLevel+"", state);
