@@ -5,6 +5,6 @@
 # IntelliJ project files
 .idea
 *.iml
-E:\LearningWorkspace\commons-learning\.idea\workspace.xml
+.idea/workspace.xml
 out
 gen
