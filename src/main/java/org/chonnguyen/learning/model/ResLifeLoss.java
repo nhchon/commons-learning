@@ -21,6 +21,38 @@ public class ResLifeLoss {
     private double sector6Absent;
     private String state;
 
+    /**
+     * Compare on primary key CONSTRAINT PK PRIMARY KEY (EVENT_ID,LOCATION,LOCATION_LEVEL)
+     *
+     * @param obj
+     * @return
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+
+        if (!ResLifeLoss.class.isAssignableFrom(obj.getClass())) {
+            return false;
+        }
+
+        final ResLifeLoss other = (ResLifeLoss) obj;
+        if ((this.eventId == null) ? (other.eventId != null) : !this.eventId.equals(other.eventId)) {
+            return false;
+        }
+
+        if ((this.location == null) ? (other.location != null) : !this.location.equals(other.location)) {
+            return false;
+        }
+
+        if ((this.locationLevel == null) ? (other.locationLevel != null) : !this.locationLevel.equals(other.locationLevel)) {
+            return false;
+        }
+
+        return true;
+    }
+
     @Override
     public String toString() {
         NumberFormat nFormat = new DecimalFormat("#0.000000000000000");

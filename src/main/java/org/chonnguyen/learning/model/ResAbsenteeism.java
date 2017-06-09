@@ -21,6 +21,38 @@ public class ResAbsenteeism {
     private Double sector5;
     private Double sector6;
 
+    /**
+     * Compare on primary key CONSTRAINT PK PRIMARY KEY (EVENT_ID,LOCATION,"DAY")
+     *
+     * @param obj
+     * @return
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+
+        if (!ResAbsenteeism.class.isAssignableFrom(obj.getClass())) {
+            return false;
+        }
+
+        final ResAbsenteeism other = (ResAbsenteeism) obj;
+        if ((this.eventId == null) ? (other.eventId != null) : !this.eventId.equals(other.eventId)) {
+            return false;
+        }
+
+        if ((this.location == null) ? (other.location != null) : !this.location.equals(other.location)) {
+            return false;
+        }
+
+        if ((this.day == null) ? (other.day != null) : !this.day.equals(other.day)) {
+            return false;
+        }
+
+        return true;
+    }
+
     @Override
     public String toString() {
         NumberFormat nFormat = new DecimalFormat("#0.000000000000000");

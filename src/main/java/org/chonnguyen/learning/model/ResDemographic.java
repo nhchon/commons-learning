@@ -15,6 +15,42 @@ public class ResDemographic {
     private int deaths;
     private String state;
 
+    /**
+     * Compare on primary key CONSTRAINT PK PRIMARY KEY (EVENT_ID,LOCATION,LOCATION_LEVEL,GENDER,AGE)
+     *
+     * @param obj
+     * @return
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+
+        if (!ResDemographic.class.isAssignableFrom(obj.getClass())) {
+            return false;
+        }
+
+        final ResDemographic other = (ResDemographic) obj;
+        if ((this.eventId == null) ? (other.eventId != null) : !this.eventId.equals(other.eventId)) {
+            return false;
+        }
+
+        if ((this.location == null) ? (other.location != null) : !this.location.equals(other.location)) {
+            return false;
+        }
+
+        if ((this.locationLevel == null) ? (other.locationLevel != null) : !this.locationLevel.equals(other.locationLevel)) {
+            return false;
+        }
+
+        if (this.age != other.age) {
+            return false;
+        }
+
+        return true;
+    }
+
     @Override
     public String toString() {
         StringBuilder b = new StringBuilder();

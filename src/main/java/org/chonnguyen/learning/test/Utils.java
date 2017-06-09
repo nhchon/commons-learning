@@ -2,7 +2,12 @@ package org.chonnguyen.learning.test;
 
 import org.apache.commons.lang3.StringUtils;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
 import java.util.GregorianCalendar;
+import java.util.List;
 
 /**
  * Created by nhchon on 6/7/2017 9:56 AM.
@@ -20,5 +25,20 @@ public class Utils {
 
     public static int randBetween(int start, int end) {
         return start + (int)Math.round(Math.random() * (end - start));
+    }
+
+    public static <T extends Object> void writeCSVFile(List<T> objs, String csvHeaderLine, String fileName) throws Exception {
+        File fout = new File(fileName);
+        try (
+                FileOutputStream fos = new FileOutputStream(fout);
+                BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
+        ) {
+            bw.write(csvHeaderLine);
+            bw.newLine();
+            for(T r : objs) {
+                bw.write(r.toString());
+                bw.newLine();
+            }
+        }
     }
 }

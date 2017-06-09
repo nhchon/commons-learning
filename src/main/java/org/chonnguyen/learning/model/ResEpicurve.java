@@ -18,6 +18,43 @@ public class ResEpicurve {
     private Long deaths;
     private String day;
 
+    /**
+     * Compare on primary key CONSTRAINT PK PRIMARY KEY (EVENT_ID,LOCATION,LOCATION_LEVEL,"DAY")
+     *
+     * @param obj
+     * @return
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+
+        if (!ResEpicurve.class.isAssignableFrom(obj.getClass())) {
+            return false;
+        }
+
+        final ResEpicurve other = (ResEpicurve) obj;
+        if ((this.eventId == null) ? (other.eventId != null) : !this.eventId.equals(other.eventId)) {
+            return false;
+        }
+
+        if ((this.location == null) ? (other.location != null) : !this.location.equals(other.location)) {
+            return false;
+        }
+
+        if ((this.locationLevel == null) ? (other.locationLevel != null) : !this.locationLevel.equals(other.locationLevel)) {
+            return false;
+        }
+
+        if ((this.day == null) ? (other.day != null) : !this.day.equals(other.day)) {
+            return false;
+        }
+
+        return true;
+    }
+
+
     @Override
     public String toString() {
         StringBuilder b = new StringBuilder();

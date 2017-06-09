@@ -53,20 +53,24 @@ public class GenerateDummyDataForGB19183 {
 
             // RES_LIFE_LOSS_DATA
             ResLifeLoss r = generateResLifeLossModel(eventId, location, locationLevel+"", state);
-            resLifeLosses.add(r);
+            addElement2List(resLifeLosses, r);
+            //resLifeLosses.add(r);
             //System.out.println(r);
 
             // RES_EPICURVE_DATA
             ResEpicurve resEpicurve = generateResEpicurveData(eventId + "", location, locationLevel+"", state);
-            resEpicurves.add(resEpicurve);
+            addElement2List(resEpicurves, resEpicurve);
+            //resEpicurves.add(resEpicurve);
             //System.out.println(resEpicurve);
 
             ResDemographic resDemographic = generateResDemographicData(eventId + "", location, locationLevel+"", state);
-            resDemographics.add(resDemographic);
+            addElement2List(resDemographics, resDemographic);
+            //resDemographics.add(resDemographic);
             //System.out.println(resDemographic.toString());
 
             ResAbsenteeism resAbsenteeism = generateResAbsenteeism(eventId + "", location, locationLevel+"", state);
-            resAbsenteeisms.add(resAbsenteeism);
+            addElement2List(resAbsenteeisms, resAbsenteeism);
+            //resAbsenteeisms.add(resAbsenteeism);
             System.out.println(resAbsenteeism.toString());
         }
 
@@ -82,6 +86,18 @@ public class GenerateDummyDataForGB19183 {
 
         // create file RES_ABSENTEEISM_DATA.csv
         writeFile(resAbsenteeisms, RES_ABSENTEEISM_DATA_CSV_HEADR, RES_ABSENTEEISM_DATA_CSV_FILE_PATH);
+    }
+
+    /**
+     *
+     * @param list
+     * @param lObj
+     * @param <T>
+     */
+    public static <T extends Object> void addElement2List(List<T> list, T lObj) {
+        if (list.stream().filter(l -> l.equals(lObj)).count() > 0) return;
+
+        list.add(lObj);
     }
 
     /**
