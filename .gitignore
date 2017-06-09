@@ -6,10 +6,7 @@
 .idea
 *.iml
 .idea/workspace.xml
+target
 out
 gen
 commons-learning.iml
-target/classes/countries_region.json
-target/classes/org/chonnguyen/learning/model/ResAbsenteeism.class
-target/generated-sources/
-target/generated-test-sources/
