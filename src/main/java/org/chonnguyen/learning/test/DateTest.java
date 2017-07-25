@@ -1,20 +1,29 @@
 package org.chonnguyen.learning.test;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.TimeZone;
 
 /**
  * Created by nhchon on 5/18/2017 1:54 PM.
  */
 public class DateTest {
-    public static void main(String[] args) {
-        Calendar a = getCalendar(233884800000L);
-        Calendar b = getCalendar(1487980800000L);
+    public static void main(String[] args) throws Exception{
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
-        System.out.println(a.get(Calendar.YEAR));
+        String valueStr = "1-07-06";
+        Date date = dateFormat.parse(valueStr);
+        System.out.println(date);
 
-        System.out.println(b.get(Calendar.YEAR));
-        System.out.println(b.get(Calendar.YEAR) - a.get(Calendar.YEAR));
+//        Calendar a = getCalendar(233884800000L);
+//        Calendar b = getCalendar(1487980800000L);
+//
+//        System.out.println(a.get(Calendar.YEAR));
+//
+//        System.out.println(b.get(Calendar.YEAR));
+//        System.out.println(b.get(Calendar.YEAR) - a.get(Calendar.YEAR));
     }
 
     public static int getDiffYears(Long firstTimestamp, Long lastTimestamp) {

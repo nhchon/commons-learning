@@ -21,7 +21,7 @@ public class GenerateEpidemicDataLongLatTitude {
     public static void main(String[] args) {
         NumberFormat nFormat = new DecimalFormat("#0.000000000000000");
 
-        String filePath = "C:\\Users\\nhchon\\Desktop\\RES_AGGREGATED_EPIDEMIC_DATA_201706091445-sandbox-59.csv";
+        String filePath = "C:\\Users\\nhchon\\Desktop\\RES_AGGREGATED_EPIDEMIC_DATA_201706140954-Sandbox-15.csv";
 
         String newFilePath = "C:\\Users\\nhchon\\Desktop\\RES_AGGREGATED_EPIDEMIC_DATA_longlat.csv";
         String headerFile = "UNIQUE_KEY,EVENT_ID,LOCATION_LEVEL,COUNTRY,COUNTRY_CODE,STATE,INFECTED,HOSP,DEATHS,ROW_TYPE,GENDER,AGE_BUCKET,LATITUDE,LONGITUDE";

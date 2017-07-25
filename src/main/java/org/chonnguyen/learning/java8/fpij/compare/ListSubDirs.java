@@ -33,16 +33,28 @@ public class ListSubDirs {
         System.out.println("Count: " + files.size());
     }
 
-    public static void betterWay() {
+    public static void betterWay() throws Exception {
         List<File> files =
-                Stream.of(new File(".").listFiles())
+                Stream.of(new File("D:\\Metabiota-Docs\\metabiota_modeling-res_deliverables-0628f5734f9c").listFiles())
                         .flatMap(file -> file.listFiles() == null ?
                                 Stream.of(file) : Stream.of(file.listFiles()))
                         .collect(toList());
+        files.forEach(f -> {
+            try {
+                System.out.println("===================================================================================");
+                System.out.println(f.getAbsolutePath());
+                System.out.println(f.getCanonicalPath());
+                System.out.println(f.getName());
+                System.out.println(f.getParent());
+                System.out.println(f.getPath());
+                System.out.println("===================================================================================");
+            }
+            catch (Exception ex) {}
+        });
         System.out.println("Count: " + files.size());
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         System.out.println("START:HARDWAY_OUTPUT");
         listTheHardWay();
         System.out.println("END:HARDWAY_OUTPUT");

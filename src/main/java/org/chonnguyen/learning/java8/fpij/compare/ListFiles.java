@@ -14,7 +14,7 @@ import java.nio.file.Paths;
 
 public class ListFiles {
   public static void main(String[] args) throws IOException {
-  Files.list(Paths.get("."))
+  Files.list(Paths.get("D:\\Metabiota-Docs\\metabiota_modeling-res_deliverables-0628f5734f9c"))
        .forEach(System.out::println);
   }
 }
