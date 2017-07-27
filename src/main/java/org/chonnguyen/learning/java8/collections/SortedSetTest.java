@@ -1,7 +1,7 @@
 package org.chonnguyen.learning.java8.collections;
 
 import java.util.*;
-import static collections.StaticTestData.*;
+import static org.chonnguyen.learning.java8.collections.StaticTestData.*;
 
 public class SortedSetTest {
 

@@ -45,39 +45,39 @@ class ArrayListString extends ArrayList<String> implements ListString {
   public ArrayListString(int capacity) { super(capacity); }
 }
 
-class Test {
-  public static void testDelegation() {
-    List<? extends List<?>> lists =
-      Arrays.asList(
-        ListStrings.wrap(Arrays.asList("one","two")),
-        Arrays.asList(3,4),
-        Arrays.asList("five","six"),
-        ListStrings.wrap(Arrays.asList("seven","eight"))
-      );
-    ListString[] array = new ListString[2];
-    int i = 0;
-    for (List<?> list : lists)
-      if (list instanceof ListString)
-        array[i++] = (ListString)list;
-    assert Arrays.toString(array).equals("[[one, two], [seven, eight]]");
-  }
-  public static void testInheritance() {
-    List<? extends List<?>> lists =
-      Arrays.asList(
-        new ArrayListString(Arrays.asList("one","two")),
-        Arrays.asList(3,4),
-        Arrays.asList("five","six"),
-        new ArrayListString(Arrays.asList("seven","eight"))
-      );
-    ListString[] array = new ListString[2];
-    int i = 0;
-    for (List<?> list : lists)
-      if (list instanceof ListString)
-        array[i++] = (ListString)list;
-    assert Arrays.toString(array).equals("[[one, two], [seven, eight]]");
-  }
-  public static void main(String[] args) {
-    testDelegation();
-    testInheritance();
-  }
-}
+//class Test {
+//  public static void testDelegation() {
+//    List<? extends List<?>> lists =
+//      Arrays.asList(
+//        ListStrings.wrap(Arrays.asList("one","two")),
+//        Arrays.asList(3,4),
+//        Arrays.asList("five","six"),
+//        ListStrings.wrap(Arrays.asList("seven","eight"))
+//      );
+//    ListString[] array = new ListString[2];
+//    int i = 0;
+//    for (List<?> list : lists)
+//      if (list instanceof ListString)
+//        array[i++] = (ListString)list;
+//    assert Arrays.toString(array).equals("[[one, two], [seven, eight]]");
+//  }
+//  public static void testInheritance() {
+//    List<? extends List<?>> lists =
+//      Arrays.asList(
+//        new ArrayListString(Arrays.asList("one","two")),
+//        Arrays.asList(3,4),
+//        Arrays.asList("five","six"),
+//        new ArrayListString(Arrays.asList("seven","eight"))
+//      );
+//    ListString[] array = new ListString[2];
+//    int i = 0;
+//    for (List<?> list : lists)
+//      if (list instanceof ListString)
+//        array[i++] = (ListString)list;
+//    assert Arrays.toString(array).equals("[[one, two], [seven, eight]]");
+//  }
+//  public static void main(String[] args) {
+//    testDelegation();
+//    testInheritance();
+//  }
+//}

@@ -6,7 +6,7 @@ import java.util.concurrent.DelayQueue;
 import java.util.concurrent.BlockingQueue;
 import java.util.Set;
 import java.util.HashSet;
-import static collections.StaticTestData.*;
+import static org.chonnguyen.learning.java8.collections.StaticTestData.*;
 
 public class DelayedTask implements Delayed {
   public final static long MILLISECONDS_IN_DAY = 60 * 60 * 24 * 1000;

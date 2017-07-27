@@ -3,7 +3,7 @@ package org.chonnguyen.learning.java8.collections;
 import java.util.Comparator;
 import java.util.Queue;
 import java.util.PriorityQueue;
-import static collections.StaticTestData.*;
+import static org.chonnguyen.learning.java8.collections.StaticTestData.*;
 
 public class PriorityQueueTest {
 
