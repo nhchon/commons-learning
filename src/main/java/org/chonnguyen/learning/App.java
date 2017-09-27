@@ -29,5 +29,9 @@ public class App
         System.out.println(~n ^ (1L << 63) - 1);
 
 
+        Double d = new Double(1.23442342386874234);
+        System.out.println(d.toString());
+
+        System.out.println("".substring("".length()));
     }
 }
