@@ -1,9 +1,8 @@
 package org.chonnguyen.learning;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import org.chonnguyen.learning.basic.AbstractProcessor;
+import org.chonnguyen.learning.basic.ConcreteProcessorA;
+import org.chonnguyen.learning.basic.ConcreteProcessorB;
 
 /**
  * Hello world!
@@ -33,5 +32,10 @@ public class App
         System.out.println(d.toString());
 
         System.out.println("".substring("".length()));
+
+        AbstractProcessor A = new ConcreteProcessorA();
+        A.process();
+        AbstractProcessor B = new ConcreteProcessorB();
+        B.process();
     }
 }

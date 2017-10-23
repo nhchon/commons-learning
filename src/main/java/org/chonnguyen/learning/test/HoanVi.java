@@ -16,7 +16,7 @@ import java.util.Scanner;
 public class HoanVi {
     private int i;
     private int n = 4;
-    private int[] a = {-1, 9, 20, 26, 38};
+    private int[] a = {-1, 9, 15, 20, 26, 38};
     //Khởi tạo
     public void Init() {
 //        Scanner input = new Scanner(System.in);
