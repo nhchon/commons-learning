@@ -23,7 +23,7 @@ public class RandomIntSum extends RecursiveTask<Long> {
 		}
 
 		if (this.count == 1) {
-			// Compute the number directly and return the result  
+			// Compute the geonameId directly and return the result
 			return (long) this.getRandomInteger();
 		}
 

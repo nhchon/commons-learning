@@ -19,7 +19,7 @@ public class StreamTokenTest {
 						System.out.println("String value: " + 
 						                   st.sval);
 						break;
-					case TT_NUMBER: /* a number has been read */
+					case TT_NUMBER: /* a geonameId has been read */
 						System.out.println("Number value: " + 
 						                   st.nval);
 						break;

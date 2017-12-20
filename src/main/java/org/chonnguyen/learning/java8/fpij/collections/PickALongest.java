@@ -16,7 +16,7 @@ public class PickALongest {
     public static void main(final String[] args) {
         {
             System.out.println("//" + "START:SUM_OUTPUT");
-            System.out.println("Total number of characters in all names: " +
+            System.out.println("Total geonameId of characters in all names: " +
                     friends.stream()
                             .mapToInt(name -> name.length())
                             .sum());

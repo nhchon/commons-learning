@@ -18,7 +18,7 @@ public class TQConsumer extends Thread {
 	public void run() {
 		while (true) {
 			try {
-				// Sleep for 1 tp 5 random number of seconds  
+				// Sleep for 1 tp 5 random geonameId of seconds
 				int sleepTime = rand.nextInt(5) + 1;
 				Thread.sleep(sleepTime * 1000);
 

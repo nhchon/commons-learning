@@ -8,20 +8,90 @@
  *  written permission is obtained from Metabiota Incorporated.
  *************************************************************************/
 package org.chonnguyen.learning.jackson;
+import com.opencsv.CSVReader;
 import org.json.*;
 
+import java.io.FileReader;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Created by nhchon on 12/14/2017 11:10 AM.
  */
 public class UyenSuperJSon {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+        List<CountryState> wrongList = readWrongList();
+        /////////////////////////////////
+        List<CountryState> modelingList = readModelingData();
+        boolean inside = false;
+        for (CountryState wl : wrongList) {
+            inside = false;
+            for (CountryState cs : modelingList) {
+                if (Objects.equals(wl.getCountryCode(), cs.getCountryCode()) && Objects.equals(wl.getStateCode(), cs.getStateCode())) {
+                    System.out.println(wl.toString() + " inside Modeling List");
+                    inside = true;
+                    break;
+                }
+            }
+
+            if (!inside) {
+                System.out.println("Error: " + wl.toString());
+            }
+        }
+    }
+
+    public static List<CountryState> readWrongList() throws Exception {
+        List<CountryState> records = new ArrayList<>();
+        String[] record = null;
+        try {
+            CSVReader reader = new CSVReader(new FileReader("C:\\Users\\nhchon\\Pictures\\Metabiota\\GB-24351\\wrong-list-edit.txt"), ',');
+            while ((record = reader.readNext()) != null) {
+                String countryCode = record[0];
+                String stateCode = record[1];
+                records.add(new CountryState(countryCode, stateCode, null));
+            }
+        } catch (Exception ex) {
+            System.out.println(Arrays.toString(record));
+            ex.printStackTrace();
+        }
+
+        // sort list object
+        records.sort(Comparator.comparing(a -> a.getCountryCode() + a.getStateCode()));
+
+        //records.forEach(System.out::println);
+
+        return records;
+    }
+
+    public static List<CountryState> readModelingData() throws Exception {
+        List<CountryState> records = new ArrayList<>();
+        String[] record = null;
+        try {
+            CSVReader reader = new CSVReader(new FileReader("C:\\Users\\nhchon\\Pictures\\Metabiota\\GB-24351\\SolrData\\Modeling-States-Name.csv"), '\t');
+            while ((record = reader.readNext()) != null) {
+                String[] countryState = record[0].split("\\.");
+                String countryCode = countryState[0];
+                String stateCode = countryState[1];
+                String stateName = record[1];
+                records.add(new CountryState(countryCode, stateCode, stateName));
+            }
+        } catch (Exception ex) {
+            System.out.println(Arrays.toString(record));
+            ex.printStackTrace();
+        }
+
+        // sort list object
+        records.sort(Comparator.comparing(a -> a.getCountryCode() + a.getStateCode()));
+
+        //records.forEach(System.out::println);
+
+        return records;
+    }
+
+    public static void gb_24351(String[] args) throws Exception {
         String jsonStrData = "[\n" +
                 "  {\n" +
                 "    \"countryCode\": \"BW\",\n" +
@@ -539,6 +609,8 @@ public class UyenSuperJSon {
 
         JSONObject finalObj = new JSONObject();
         Map<String, String> countryStateCodeToStateName = new HashMap<>();
+        List<CountryState> modelingList = new ArrayList<>();
+
         JSONArray jsonArr = new JSONArray(jsonStrData);
 //        System.out.println(jsonObj.toString());
         for(int i = 0, len = jsonArr.length(); i < len; i++) {
@@ -548,20 +620,122 @@ public class UyenSuperJSon {
             Iterator<?> keys = stateObj.keys();
 
             while( keys.hasNext() ) {
-                String key = (String)keys.next();
-                if ( stateObj.get(key) instanceof JSONObject ) {
-                    countryStateCodeToStateName.put(countryCode+"."+key, stateObj.getString(key));
-                }
-                System.out.println(countryCode+"."+key+" --> "+stateObj.getString(key));
-                finalObj.put(countryCode+"."+key, stateObj.getString(key));
+                String stateCode = (String)keys.next();
+//                if ( stateObj.get(stateCode) instanceof JSONObject ) {
+//                    countryStateCodeToStateName.put(countryCode+"."+stateCode, stateObj.getString(stateCode));
+//
+//                    list.add(new CountryState(countryCode, stateCode, stateObj.getString(stateCode)));
+//                }
+                //System.out.println(countryCode+"."+stateCode+" --> "+stateObj.getString(stateCode));
+                modelingList.add(new CountryState(countryCode, stateCode, stateObj.getString(stateCode)));
+                finalObj.put(countryCode+"."+stateCode, stateObj.getString(stateCode));
             }
         }
-        System.out.println(finalObj.toString());
 
+        // sort list object
+        modelingList.sort(Comparator.comparing(a -> a.getCountryCode() + a.getStateCode()));
+
+        // write to file
+        writeModelingJsonToCSVFile(modelingList);
+
+        //
+        List<SolrRecord> solrDataList = readSolrData();
+
+        List<SolrRecord> intersectList = new ArrayList<>();
+        List<SolrRecord> correctStateCodeList = new ArrayList<>();
+        List<String> compareStateCodeList = new ArrayList<>();
+        for (CountryState cs : modelingList) {
+            for (SolrRecord sr : solrDataList) {
+                if (cs.getCountryCode().equals(sr.getCountryCode()) &&
+                        (cs.getStateName().equals(sr.getStateName()) || cs.getStateName().equals(sr.getStatenameInAscii()))) {
+                    intersectList.add(sr);
+
+                    compareStateCodeList.add(cs.toString() + " <<=====>> " +sr.toString());
+                    System.out.println(cs.toString() + " <<=====>> " +sr.toString());
+
+                    //String countryCode, String stateCode, String stateName, String statenameInAscii, String geonameId
+                    SolrRecord newSr = new SolrRecord(sr.getCountryCode(), cs.getStateCode(), sr.getStateName(), sr.getStatenameInAscii(), sr.getGeonameId());
+                    correctStateCodeList.add(newSr);
+                }
+            }
+        }
+
+        String compareStateCodeContent = compareStateCodeList.stream()
+                .map( n -> n.toString() )
+                .collect(Collectors.joining(System.lineSeparator()));
         try {
-            Files.write(Paths.get("D:/States.json"), finalObj.toString().getBytes(StandardCharsets.UTF_8));
+            Files.write(Paths.get("C:\\Users\\nhchon\\Pictures\\Metabiota\\GB-24351\\SolrData\\Compare-Content-File.csv"), compareStateCodeContent.getBytes(StandardCharsets.UTF_8));
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+
+        // sort list object
+        intersectList.sort(Comparator.comparing(a -> a.getCountryCode() + a.getStateCode()));
+
+        String intersectContent = intersectList.stream()
+                .map( n -> n.toString() )
+                .collect(Collectors.joining(System.lineSeparator()));
+        try {
+            Files.write(Paths.get("C:\\Users\\nhchon\\Pictures\\Metabiota\\GB-24351\\SolrData\\Extract-Solr-Data-Have-SameState-Name.csv"), intersectContent.getBytes(StandardCharsets.UTF_8));
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        correctStateCodeList.sort(Comparator.comparing(a -> a.getCountryCode() + a.getStateCode()));
+        String correctContent = correctStateCodeList.stream()
+                .map( n -> n.toString() )
+                .collect(Collectors.joining(System.lineSeparator()));
+        try {
+            Files.write(Paths.get("C:\\Users\\nhchon\\Pictures\\Metabiota\\GB-24351\\SolrData\\Content-To-Update-Solr-Server.csv"), correctContent.getBytes(StandardCharsets.UTF_8));
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+    }
+
+    public static void writeModelingJsonToCSVFile(List<CountryState> list) {
+        String content = list.stream()
+                .map( n -> n.toString() )
+                .collect(Collectors.joining(System.lineSeparator()));
+        try {
+            Files.write(Paths.get("C:\\Users\\nhchon\\Pictures\\Metabiota\\GB-24351\\SolrData\\Modeling-States-Name.csv"), content.getBytes(StandardCharsets.UTF_8));
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    public static List<SolrRecord> readSolrData() throws Exception {
+        List<SolrRecord> records = new ArrayList<>();
+        String[] record = null;
+        try {
+            CSVReader reader = new CSVReader(new FileReader("C:\\Users\\nhchon\\Pictures\\Metabiota\\GB-24351\\SolrData\\admin1CodesASCII.txt"), '\t');
+            while ((record = reader.readNext()) != null) {
+                String[] countryState = record[0].split("\\.");
+                String countryCode = countryState[0];
+                String stateCode = countryState[1];
+                String stateName = record[1];
+                String stateAsciiname = null;
+                String geonameId = null;
+                if (record.length == 3) {
+                    // No ascii name
+                    stateAsciiname = stateName;
+                    geonameId = record[2];
+                } else {
+                    stateAsciiname = record[2];
+                    geonameId = record[3];
+                }
+                records.add(new SolrRecord(countryCode, stateCode, stateName, stateAsciiname, geonameId));
+            }
+        } catch (Exception ex) {
+            System.out.println(Arrays.toString(record));
+            ex.printStackTrace();
+        }
+
+        // sort list object
+        records.sort(Comparator.comparing(a -> a.getCountryCode() + a.getStateCode()));
+
+        //records.forEach(System.out::println);
+
+        return records;
     }
 }

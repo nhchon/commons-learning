@@ -16,7 +16,7 @@ class RestaurantCustomer extends Thread {
 	public void run() {
 		r.getTable(this.customerID); // Get a table  
 		try {
-			// Eat for some time. Use number between 1 and 30 seconds  
+			// Eat for some time. Use geonameId between 1 and 30 seconds
 			int eatingTime = random.nextInt(30) + 1 ;	
 			System.out.println("Customer #" + this.customerID +
                                            " will eat for " + eatingTime + 

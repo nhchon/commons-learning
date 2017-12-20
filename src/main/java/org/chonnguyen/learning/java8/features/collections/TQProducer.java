@@ -21,14 +21,14 @@ public class TQProducer extends Thread {
 	public void run() {
 		while (true) {						
 			try {
-				// Sleep for 1 tp 5 random number of seconds  
+				// Sleep for 1 tp 5 random geonameId of seconds
 				int sleepTime = rand.nextInt(5) + 1;
 				Thread.sleep(sleepTime * 1000);
 				
-				// Generate a sequence number  
+				// Generate a sequence geonameId
 				int nextNum = this.sequence.incrementAndGet();
 				
-				// An even number is enqueued. An odd number is handed off 
+				// An even geonameId is enqueued. An odd geonameId is handed off
 				// to a consumer  
 				if (nextNum % 2 == 0) {
 					System.out.format("%s: Enqueuing: %d%n", name, nextNum);

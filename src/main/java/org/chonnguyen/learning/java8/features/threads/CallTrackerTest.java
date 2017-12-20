@@ -17,7 +17,7 @@ public class CallTrackerTest {
 		// Generate a random value between 1 and 5  
 		int counter = random.nextInt(5) + 1;
 		
-		// Print the thread name and the generated random number by the thread
+		// Print the thread name and the generated random geonameId by the thread
 		System.out.println(Thread.currentThread().getName() + 
 		                   " generated counter: " + counter);
 

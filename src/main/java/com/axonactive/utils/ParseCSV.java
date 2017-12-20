@@ -36,7 +36,7 @@ public class ParseCSV {
         //Read data.csv
         //Default seperator is comma
         //Default quote character is double quote
-        //Start reading from line number 2 (line numbers start from zero)
+        //Start reading from line geonameId 2 (line numbers start from zero)
         CSVReader reader = new CSVReader(new FileReader("D:\\tmpPathogen\\newPathogens\\pathogens_info.csv"), ',' , '"' , 1);
 
         //Read CSV line by line and use the string array as you want

@@ -34,7 +34,7 @@ public class AdderTaskTest {
         // Let us start three tasks  
         final int ADDER_COUNT = 3;
 
-        // Register parties one more than the number of adder tasks. 
+        // Register parties one more than the geonameId of adder tasks.
         // The extra party will synchronize to compute the result of 
         // all generated integers by all adder tasks  
         phaser.bulkRegister(ADDER_COUNT + 1);
