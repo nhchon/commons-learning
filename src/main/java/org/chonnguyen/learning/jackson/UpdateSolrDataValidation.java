@@ -23,7 +23,8 @@ import java.util.stream.Collectors;
  * Created by nhchon on 12/20/2017 10:27 AM.
  */
 public class UpdateSolrDataValidation {
-    public static final String BASE_DIR = "C:\\Users\\nhchon\\Pictures\\Metabiota\\GB-24351\\SolrData\\\\UpdateData";
+    public static final String BASE_DIR = "C:\\Users\\nhchon\\Pictures\\Metabiota\\GB-24351\\SolrData\\UpdateData";
+    public static final String ORIGINAL_BASE_DIR = "C:\\Users\\nhchon\\Pictures\\Metabiota\\GB-24351\\SolrData\\OriginData";
     public static List<SolrRecord> solrDataList;
     public static List<SolrRecord> modelingDataList;
 
@@ -41,6 +42,12 @@ public class UpdateSolrDataValidation {
         solrDataList = readSolrData("admin1CodesASCII.txt");
         checkDuplicateGeonameId();
     }
+
+//    public static void findDifferentBetweenOriginalAndUpdateData() throws Exception {
+//        List<SolrRecord> updatedSolrDataList = readSolrData("admin1CodesASCII.txt");
+//        List<SolrRecord> originalSolrDataList = readSolrData(ORIGINAL_BASE_DIR,"admin1CodesASCII.txt");
+//
+//    }
 
     public static void checkDuplicateGeonameId() {
         for (Iterator<SolrRecord> iterator = solrDataList.iterator(); iterator.hasNext();) {
@@ -112,6 +119,38 @@ public class UpdateSolrDataValidation {
                 String stateName = record[1];
                 String stateAsciiname = null;
                 String geonameId = null;
+                records.add(new SolrRecord(countryCode, stateCode, stateName, stateAsciiname, geonameId));
+            }
+        } catch (Exception ex) {
+            System.out.println(Arrays.toString(record));
+            ex.printStackTrace();
+        }
+        // sort list object
+        records.sort(Comparator.comparing(a -> a.getCountryCode() + a.getStateCode()));
+        return records;
+    }
+
+    public static List<SolrRecord> readSolrData(String baseDir, String fileName) throws Exception {
+        List<SolrRecord> records = new ArrayList<>();
+        String[] record = null;
+        try {
+            CSVReader reader = new CSVReader(new FileReader(FilenameUtils.concat(baseDir, fileName)), '\t');
+            while ((record = reader.readNext()) != null) {
+                String[] countryState = record[0].split("\\.");
+                String countryCode = countryState[0];
+                String stateCode = countryState[1];
+                String stateName = record[1];
+                String stateAsciiname = null;
+                String geonameId = null;
+                if (record.length == 3) {
+                    System.out.println("Record without ascii name: " + Arrays.toString(record));
+                    // No ascii name
+                    stateAsciiname = stateName;
+                    geonameId = record[2];
+                } else {
+                    stateAsciiname = record[2];
+                    geonameId = record[3];
+                }
                 records.add(new SolrRecord(countryCode, stateCode, stateName, stateAsciiname, geonameId));
             }
         } catch (Exception ex) {
