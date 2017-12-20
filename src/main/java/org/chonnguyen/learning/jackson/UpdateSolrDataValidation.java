@@ -11,6 +11,8 @@ package org.chonnguyen.learning.jackson;
 
 import com.opencsv.CSVReader;
 import org.apache.commons.io.FilenameUtils;
+import org.skife.jdbi.v2.DBI;
+import org.skife.jdbi.v2.Handle;
 
 import java.io.FileReader;
 import java.nio.charset.StandardCharsets;
@@ -25,6 +27,8 @@ import java.util.stream.Collectors;
 public class UpdateSolrDataValidation {
     public static final String BASE_DIR = "C:\\Users\\nhchon\\Pictures\\Metabiota\\GB-24351\\SolrData\\UpdateData";
     public static final String ORIGINAL_BASE_DIR = "C:\\Users\\nhchon\\Pictures\\Metabiota\\GB-24351\\SolrData\\OriginData";
+    public static final String QUERY_FCODE_BY_GEONAMEID = "select feature_code from geoname where geonameid = ?";
+    public static final String ADM1 = "ADM1";
     public static List<SolrRecord> solrDataList;
     public static List<SolrRecord> modelingDataList;
 
@@ -38,18 +42,42 @@ public class UpdateSolrDataValidation {
         checkAllSateCodeFromModelingTeamExistInUpdateSolrData();
         checkDuplicateCountryCodeAndStateCodeAfterUpdateSolrData();
 
-        // read solr data again
-        solrDataList = readSolrData("admin1CodesASCII.txt");
         checkDuplicateGeonameId();
+
+        checkAllGeonameIdsHaveFCodeADM1();
     }
 
-//    public static void findDifferentBetweenOriginalAndUpdateData() throws Exception {
-//        List<SolrRecord> updatedSolrDataList = readSolrData("admin1CodesASCII.txt");
-//        List<SolrRecord> originalSolrDataList = readSolrData(ORIGINAL_BASE_DIR,"admin1CodesASCII.txt");
-//
-//    }
+    public static void checkAllGeonameIdsHaveFCodeADM1() throws Exception{
+        solrDataList = readSolrData("admin1CodesASCII.txt");
+        List<String> notADM1FCodeList = new ArrayList<>();
 
-    public static void checkDuplicateGeonameId() {
+        DBI jdbi = new DBI("jdbc:mysql://solr-mysql.int.metabiota.com.local:3306/geonames",
+                "dbroot", "6639Oh83lO55FM");
+        try (Handle handle = jdbi.open()) {
+            for (SolrRecord solrRecord : solrDataList) {
+                String fCode = handle.createQuery(QUERY_FCODE_BY_GEONAMEID)
+                        .bind(0, Integer.parseInt(solrRecord.getGeonameId()))
+                        .mapTo(String.class)
+                        .first();
+                if (!ADM1.equals(fCode)) {
+                    notADM1FCodeList.add(solrRecord + " has fcode " + fCode);
+                } else {
+                    System.out.println(solrRecord + ": OK");
+                }
+            }
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        // print out error record
+        notADM1FCodeList.forEach(System.out::println);
+    }
+
+    public static void checkDuplicateGeonameId() throws Exception {
+        // read solr data again
+        solrDataList = readSolrData("admin1CodesASCII.txt");
+
         for (Iterator<SolrRecord> iterator = solrDataList.iterator(); iterator.hasNext();) {
             SolrRecord solrRecord = iterator.next();
 
