@@ -41,6 +41,7 @@ public class UpdateSolrDataValidation {
         System.out.println("modelingDataList.size(): " + modelingDataList.size());
 
         checkAllSateCodeFromModelingTeamExistInUpdateSolrData();
+
         checkDuplicateCountryCodeAndStateCodeAfterUpdateSolrData();
 
         checkDuplicateGeonameId();
