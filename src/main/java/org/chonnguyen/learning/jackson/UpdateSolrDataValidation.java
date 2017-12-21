@@ -11,6 +11,7 @@ package org.chonnguyen.learning.jackson;
 
 import com.opencsv.CSVReader;
 import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.skife.jdbi.v2.DBI;
 import org.skife.jdbi.v2.Handle;
 
@@ -33,7 +34,7 @@ public class UpdateSolrDataValidation {
     public static List<SolrRecord> modelingDataList;
 
     public static void main(String[] args) throws Exception {
-        solrDataList = readSolrData("admin1CodesASCII.txt");
+        solrDataList = readSolrData("D:\\Projects-Axon\\db-schema\\geoname", "admin1CodesASCII.txt");
         modelingDataList = readModelingData("Modeling-States-Name.csv");
 
         System.out.println("solrDataList.size(): " + solrDataList.size());
@@ -52,7 +53,7 @@ public class UpdateSolrDataValidation {
         List<String> notADM1FCodeList = new ArrayList<>();
 
         DBI jdbi = new DBI("jdbc:mysql://solr-mysql.int.metabiota.com.local:3306/geonames",
-                "dbroot", "6639Oh83lO55FM");
+                "dbroot", "[YOUR_PASSWORD_HERE]");
         try (Handle handle = jdbi.open()) {
             for (SolrRecord solrRecord : solrDataList) {
                 String fCode = handle.createQuery(QUERY_FCODE_BY_GEONAMEID)
@@ -178,6 +179,10 @@ public class UpdateSolrDataValidation {
                 } else {
                     stateAsciiname = record[2];
                     geonameId = record[3];
+                }
+
+                if (StringUtils.isEmpty(stateName) || StringUtils.isEmpty(stateAsciiname)) {
+                    System.out.println("Record without enough data: " + Arrays.toString(record));
                 }
                 records.add(new SolrRecord(countryCode, stateCode, stateName, stateAsciiname, geonameId));
             }
