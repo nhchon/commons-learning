@@ -101,7 +101,7 @@ public class SolrUtils {
         return records;
     }
 
-    public static void writeToFile(List<SolrRecord> records, String baseDir, String fileName) {
+    public static <T extends Object> void writeToFile(List<T> records, String baseDir, String fileName) {
         String content = records.stream()
                 .map( n -> n.toString() )
                 .collect(Collectors.joining(System.lineSeparator()));

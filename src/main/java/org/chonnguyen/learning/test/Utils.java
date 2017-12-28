@@ -6,6 +6,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
+import java.nio.charset.StandardCharsets;
 import java.util.GregorianCalendar;
 import java.util.List;
 
@@ -31,7 +32,7 @@ public class Utils {
         File fout = new File(fileName);
         try (
                 FileOutputStream fos = new FileOutputStream(fout);
-                BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
+                BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos, StandardCharsets.UTF_8));
         ) {
             bw.write(csvHeaderLine);
             bw.newLine();
