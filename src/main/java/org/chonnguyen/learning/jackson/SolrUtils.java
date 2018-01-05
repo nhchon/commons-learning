@@ -96,6 +96,7 @@ public class SolrUtils {
             System.out.println(Arrays.toString(record));
             ex.printStackTrace();
         }
+
         // sort list object
         records.sort(Comparator.comparing(a -> a.getCountryCode() + a.getStateCode()));
         return records;
