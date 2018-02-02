@@ -15,6 +15,7 @@ import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.FileReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.net.URLEncoder;
@@ -111,5 +112,9 @@ public class SolrUtils {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+    }
+
+    public static String readFileToString(String filePath) throws IOException {
+        return new String(Files.readAllBytes(Paths.get(filePath)),StandardCharsets.UTF_8);
     }
 }
