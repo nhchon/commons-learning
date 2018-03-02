@@ -24,7 +24,7 @@ public class WorkerThread extends Thread {
         // When true, (i.e. when it's a daemon thread),
         // the Worker thread terminates when the main
         // thread terminates.
-        setDaemon(false);
+        setDaemon(true);
     }
 
     public void run() {

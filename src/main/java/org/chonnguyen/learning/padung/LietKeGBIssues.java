@@ -29,7 +29,7 @@ import java.util.stream.Collectors;
  * Created by nhchon on 2/6/2018 3:14 PM.
  */
 public class LietKeGBIssues {
-    public static final String BASE_DIR = "D:\\Metabiota-Docs\\features";
+    public static final String BASE_DIR = "D:\\Metabiota-Docs\\features\\RES\\ChonTest";
 
     public static void main(String[] args) {
         List<File> fs = new ArrayList(FileUtils.listFiles(new File(BASE_DIR), new String[]{"feature"}, true));
