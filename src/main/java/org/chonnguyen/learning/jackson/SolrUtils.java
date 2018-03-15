@@ -114,6 +114,10 @@ public class SolrUtils {
         }
     }
 
+    public static <T extends Object> void writeToFile(T r, String baseDir, String fileName) {
+        writeToFile(Arrays.asList(r), baseDir, fileName);
+    }
+
     public static String readFileToString(String filePath) throws IOException {
         return new String(Files.readAllBytes(Paths.get(filePath)),StandardCharsets.UTF_8);
     }
