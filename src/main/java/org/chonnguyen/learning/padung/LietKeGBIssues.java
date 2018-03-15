@@ -11,6 +11,7 @@ package org.chonnguyen.learning.padung;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -29,7 +30,7 @@ import java.util.stream.Collectors;
  * Created by nhchon on 2/6/2018 3:14 PM.
  */
 public class LietKeGBIssues {
-    public static final String BASE_DIR = "D:\\Metabiota-Docs\\features\\catalogAnalyzer";
+    public static final String BASE_DIR = "D:\\Metabiota-Docs\\features";
 
     public static void main(String[] args) {
         List<File> fs = new ArrayList(FileUtils.listFiles(new File(BASE_DIR), new String[]{"feature"}, true));
@@ -52,7 +53,9 @@ public class LietKeGBIssues {
             }
         }
 
-        rs.sort(String::compareToIgnoreCase);
+        //rs.sort(String::compareToIgnoreCase);
+        //System.out.println("GB-7949".substring(3));
+        rs.sort(Comparator.comparing(s -> StringUtils.leftPad(s.substring(3), 8, "0")));
         for (int i=0; i<rs.size(); i++) {
             System.out.println(rs.get(i));
         }
