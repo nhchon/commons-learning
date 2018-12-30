@@ -2,89 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b72a4418-c83a-4179-8543-ecd455588aac" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/basic/AbstractProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/basic/ConcreteProcessorA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/basic/ConcreteProcessorB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/codeabbey/FahrenheitToCelsius.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/codeabbey/MaximumOfArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/codeabbey/MinimumOfThree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/codeabbey/MinimumOfTwo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/codeabbey/ReadInt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/codeabbey/Rounding.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/codeabbey/SumInLoop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/codeabbey/SumsInLoop2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/codeabbey/VowelCount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/concurrency/DaemonTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/concurrency/EveryNth.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/concurrency/TestEveryNth.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/concurrency/WorkerThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/concurrency/spliterator/FixedBatchSpliterator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/concurrency/spliterator/FixedBatchSpliteratorBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/concurrency/spliterator/SpliteratorBenchmark.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/datetime/DateTime.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/datetime/GMTTimezoneList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/datetime/UTCTimezoneList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/fi/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/fi/OrderItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/fi/Sample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/fi/Transformer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/files/CheckDuplicateRows.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/files/ReadFileLineByLine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/jackson/CountryRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/jackson/CountryState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/jackson/GeonameRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/jackson/MergedGeonameRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/jackson/OriginalGeonameRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/jackson/ReadLabels.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/jackson/SolrDataBugFixValidation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/jackson/SolrRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/jackson/SolrUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/jackson/UpdateSolrData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/jackson/UpdateSolrDataValidation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/jackson/UyenSuperJSon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/jackson/json2obj/EventSummary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/jackson/json2obj/HasArrEventSummary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/jackson/json2obj/HasEventSummary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/jackson/json2obj/MyMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/list/RemoveWhileIterate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/net/CheckURLAlive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/padung/CountResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/padung/CountStringInFiles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/padung/GenerateSampleGenericFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/padung/LietKeGBIssues.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/padung/VNReSortJson.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/random/RandomObjectFiller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/test/HoanVi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/test/ToHop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/vietnamese/Viet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/vuong/SplitString.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/FahrenheitToCelsius.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/MaximumOfArray.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/MinimumOfThree.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/MinimumOfTwo.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Modeling-States-Name.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Rounding.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/SumsInLoop2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/VowelCount.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commons-learning.iml" beforeDir="false" afterPath="$PROJECT_DIR$/commons-learning.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/axonactive/test/DateTimeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/axonactive/test/DateTimeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/axonactive/utils/ParseCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/axonactive/utils/ParseCSV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/concurrency/LinkHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/concurrency/LinkHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/java8/features/collections/TQConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/java8/features/collections/TQConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/java8/features/collections/TQProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/java8/features/collections/TQProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/java8/features/io/StreamTokenTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/java8/features/io/StreamTokenTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/java8/features/streams/PrimeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/java8/features/streams/PrimeUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/java8/features/threads/AdderTaskTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/java8/features/threads/AdderTaskTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/java8/features/threads/CallTrackerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/java8/features/threads/CallTrackerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/java8/features/threads/MeetAtBarrier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/java8/features/threads/MeetAtBarrier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/java8/features/threads/RandomIntSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/java8/features/threads/RandomIntSum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/java8/features/threads/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/java8/features/threads/Restaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/java8/features/threads/RestaurantCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/java8/features/threads/RestaurantCustomer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/java8/fpij/collections/PickALongest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/java8/fpij/collections/PickALongest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/test/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/test/Utils.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -100,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1207">
-              <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+            <state relative-caret-position="-170">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
@@ -112,11 +32,59 @@
       <file leaf-file-name="JsoupPostDataExample.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/jsoup/JsoupPostDataExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="85" column="1" selection-start-line="85" selection-start-column="1" selection-end-line="85" selection-end-column="1" />
+            <state relative-caret-position="170">
+              <caret line="39" column="51" selection-start-line="36" selection-start-column="24" selection-end-line="39" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JsoupParseCountryCodeExample.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/jsoup/JsoupParseCountryCodeExample.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="56" column="79" lean-forward="true" selection-start-line="56" selection-start-column="79" selection-end-line="56" selection-end-column="79" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GenerateSampleGenericFile.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/padung/GenerateSampleGenericFile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GenPathogenFile.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/axonactive/utils/GenPathogenFile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParseCSV.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/axonactive/utils/ParseCSV.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-85">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReadFileLineByLine.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/files/ReadFileLineByLine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -178,7 +146,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/axonactive/test/SortPathogen.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/axonactive/test/SortPathogenDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/axonactive/test/SortPathogenDTOByName.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/axonactive/test/SortQueryEventDTO.java" />
@@ -229,6 +196,7 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/jsoup/JsoupPostDataExample.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/jsoup/JsoupParseCountryCodeExample.java" />
       </list>
     </option>
   </component>
@@ -240,8 +208,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1358" />
-    <option name="y" value="-8" />
+    <option name="x" value="-131" />
+    <option name="y" value="44" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
@@ -293,7 +261,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="learning" type="462c0819:PsiDirectoryNode" />
-              <item name="java8" type="462c0819:PsiDirectoryNode" />
+              <item name="jsoup" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="commons-learning" type="b2602c69:ProjectViewProjectNode" />
@@ -302,7 +270,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="learning" type="462c0819:PsiDirectoryNode" />
-              <item name="jsoup" type="462c0819:PsiDirectoryNode" />
+              <item name="vietnamese" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -352,7 +320,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.JsoupPostDataExample">
+  <component name="RunManager" selected="Application.JsoupParseCountryCodeExample">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -378,17 +346,6 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="DateTimeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.axonactive.test.DateTimeTest" />
-      <module name="commons-learning" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.axonactive.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
     <configuration name="GenerateDummyDataForGB19183" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.chonnguyen.learning.test.GenerateDummyDataForGB19183" />
       <module name="commons-learning" />
@@ -396,6 +353,17 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.chonnguyen.learning.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="JsoupParseCountryCodeExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.chonnguyen.learning.jsoup.JsoupParseCountryCodeExample" />
+      <module name="commons-learning" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.chonnguyen.learning.jsoup.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -508,19 +476,19 @@
       <method />
     </configuration>
     <list>
-      <item itemvalue="Application.DateTimeTest" />
       <item itemvalue="Application.App" />
       <item itemvalue="Application.DateTest" />
       <item itemvalue="Application.GenerateDummyDataForGB19183" />
       <item itemvalue="Application.JsoupPostDataExample" />
+      <item itemvalue="Application.JsoupParseCountryCodeExample" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JsoupParseCountryCodeExample" />
         <item itemvalue="Application.JsoupPostDataExample" />
         <item itemvalue="Application.GenerateDummyDataForGB19183" />
         <item itemvalue="Application.DateTest" />
         <item itemvalue="Application.App" />
-        <item itemvalue="Application.DateTimeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -553,15 +521,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32843137" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.38235295" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38235295" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.34860885" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.503268" />
       <window_info id="Designer" order="2" />
@@ -572,23 +541,22 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39952904" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="DB Execution Console" order="7" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="DB Browser" order="2" />
-      <window_info anchor="right" id="Properties" order="3" />
-      <window_info id="Capture Tool" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="SonarLint" order="8" />
+      <window_info anchor="bottom" id="DB Execution Console" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info id="Nl-Palette" order="2" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32967034" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32843137" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="bottom" id="SonarLint" order="8" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32967034" />
+      <window_info id="Nl-Palette" order="2" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info anchor="right" id="Properties" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="DB Browser" order="2" />
       <window_info anchor="right" id="Data View" order="4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -609,40 +577,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/axonactive/utils/RandomObjectFiller.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/axonactive/utils/VietFuckingLot.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/test/DateTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/parallelstreams/ArticleInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-157">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/parallelstreams/Condition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/java8/features/annotation/AccessAnnotation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="31" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/java8/fpij/collections/Folks.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -910,13 +844,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -930,20 +857,72 @@
     <entry file="file://$PROJECT_DIR$/commons-learning.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/jsoup/JsoupPostDataExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="85" column="1" selection-start-line="85" selection-start-column="1" selection-end-line="85" selection-end-column="1" />
+        <state relative-caret-position="170">
+          <caret line="39" column="51" selection-start-line="36" selection-start-column="24" selection-end-line="39" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/vietnamese/Viet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/padung/GenerateSampleGenericFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/axonactive/utils/GenPathogenFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/axonactive/utils/ParseCSV.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/files/ReadFileLineByLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1207">
-          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+        <state relative-caret-position="-170">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/chonnguyen/learning/jsoup/JsoupParseCountryCodeExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="56" column="79" lean-forward="true" selection-start-line="56" selection-start-column="79" selection-end-line="56" selection-end-column="79" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
