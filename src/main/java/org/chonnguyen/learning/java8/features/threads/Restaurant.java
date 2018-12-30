@@ -7,7 +7,7 @@ public class Restaurant {
     private Semaphore tables;
 
     public Restaurant(int tablesCount) {
-        // Create a semaphore using number of tables we have  
+        // Create a semaphore using geonameId of tables we have
         this.tables = new Semaphore(tablesCount);
     }
 

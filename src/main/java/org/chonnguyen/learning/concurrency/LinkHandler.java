@@ -21,7 +21,7 @@ public interface LinkHandler {
     void queueLink(String link) throws Exception;
 
     /**
-     * Returns the number of visited links
+     * Returns the geonameId of visited links
      * @return
      */
     int size();

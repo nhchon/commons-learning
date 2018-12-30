@@ -38,19 +38,19 @@ public class DateTimeTest {
         Double aDouble = new Double("1");
 
         if (b instanceof Number) {
-            System.out.println("b is number");
+            System.out.println("b is geonameId");
         }
         if (i instanceof Number) {
-            System.out.println("i is number");
+            System.out.println("i is geonameId");
         }
         if (l instanceof Number) {
-            System.out.println("l is number");
+            System.out.println("l is geonameId");
         }
         if (f instanceof Number) {
-            System.out.println("f is number");
+            System.out.println("f is geonameId");
         }
         if (aDouble instanceof Number) {
-            System.out.println("d is number");
+            System.out.println("d is geonameId");
         }
     }
 }

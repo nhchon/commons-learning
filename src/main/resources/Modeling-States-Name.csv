@@ -1,0 +1,416 @@
+BW.CE	Central
+BW.FR	Francistown
+BW.GA	Gaborone
+BW.GH	Ghanzi
+BW.JW	Jwaneng
+BW.KG	Kgalagadi
+BW.KL	Kgatleng
+BW.KW	Kweneng
+BW.LO	Lobatse
+BW.NE	North East
+BW.NW	North West
+BW.SE	South East
+BW.SO	Southern
+BW.SP	Selibe Phikwe
+BW.ST	Sowa Town
+CI.AB	Abidjan
+CI.BS	Bas-Sassandra
+CI.CM	Comoe
+CI.DN	Denguele
+CI.GD	Goh-Djiboua
+CI.LC	Lacs
+CI.LG	Lagunes
+CI.MG	Montagnes
+CI.SM	Sassandra-Marahoue
+CI.SV	Savanes
+CI.VB	Vallee du Bandama
+CI.WR	Woroba
+CI.YM	Yamoussoukro
+CI.ZZ	Zanzan
+CO.AMA	Amazonas
+CO.ANT	Antioquia
+CO.ARA	Arauca
+CO.ATL	Atlantico
+CO.BOL	Bolivar
+CO.BOY	Boyaca
+CO.CAL	Caldas
+CO.CAQ	Caqueta
+CO.CAS	Casanare
+CO.CAU	Cauca
+CO.CES	Cesar
+CO.CHO	Choco
+CO.COR	Cordoba
+CO.CUN	Cundinamarca
+CO.DC	Distrito Capital de Bogota
+CO.GUA	Guainia
+CO.GUV	Guaviare
+CO.HUI	Huila
+CO.LAG	La Guajira
+CO.MAG	Magdalena
+CO.MET	Meta
+CO.NAR	Narino
+CO.NSA	Norte de Santander
+CO.PUT	Putumayo
+CO.QUI	Quindio
+CO.RIS	Risaralda
+CO.SAN	Santander
+CO.SAP	San Andres
+CO.SUC	Sucre
+CO.TOL	Tolima
+CO.VAC	Valle del Cauca
+CO.VAU	Vaupes
+CO.VID	Vichada
+ET.AA	Addis Ababa
+ET.AF	Afar
+ET.AM	Amara
+ET.BE	Benshangul-Gumaz
+ET.DD	Dire Dawa
+ET.GA	Gambela Peoples
+ET.HA	Harari People
+ET.OR	Oromia
+ET.SN	Southern Nations Nationalities and Peoples
+ET.SO	Somali
+ET.TI	Tigrai
+ID.AC	Aceh
+ID.BA	Bali
+ID.BB	Bangka-Belitung Islands
+ID.BE	Bengkulu
+ID.BT	Banten
+ID.GO	Gorontalo
+ID.JA	Jambi
+ID.JB	West Java
+ID.JI	East Java
+ID.JK	Jakarta
+ID.JT	Central Java
+ID.KB	West Kalimantan
+ID.KI	East Kalimantan
+ID.KR	Riau Islands
+ID.KS	South Kalimantan
+ID.KT	Central Kalimantan
+ID.KU	North Kalimantan
+ID.LA	Lampung
+ID.MA	Maluku
+ID.MU	North Maluku
+ID.NB	West Nusa Tenggara
+ID.NT	East Nusa Tenggara
+ID.PA	Papua
+ID.PB	West Papua
+ID.RI	Riau
+ID.SA	North Sulawesi
+ID.SB	West Sumatra
+ID.SG	Southeast Sulawesi
+ID.SN	South Sulawesi
+ID.SR	West Sulawesi
+ID.SS	South Sumatra
+ID.ST	Central Sulawesi
+ID.SU	North Sumatra
+ID.YO	Yogyakarta
+KE.01	Baringo
+KE.02	Bomet
+KE.03	Bungoma
+KE.04	Busia
+KE.05	Elgeyo/Marakwet
+KE.06	Embu
+KE.07	Garissa
+KE.08	Homa Bay
+KE.09	Isiolo
+KE.10	Kajiado
+KE.11	Kakamega
+KE.12	Kericho
+KE.13	Kiambu
+KE.14	Kilifi
+KE.15	Kirinyaga
+KE.16	Kisii
+KE.17	Kisumu
+KE.18	Kitui
+KE.19	Kwale
+KE.20	Laikipia
+KE.21	Lamu
+KE.22	Machakos
+KE.23	Makueni
+KE.24	Mandera
+KE.25	Marsabit
+KE.26	Meru
+KE.27	Migori
+KE.28	Mombasa
+KE.29	Murang'a
+KE.30	Nairobi City
+KE.31	Nakuru
+KE.32	Nandi
+KE.33	Narok
+KE.34	Nyamira
+KE.35	Nyandarua
+KE.36	Nyeri
+KE.37	Samburu
+KE.38	Siaya
+KE.39	Taita/Taveta
+KE.40	Tana River
+KE.41	Tharaka-Nithi
+KE.42	Trans Nzoia
+KE.43	Turkana
+KE.44	Uasin Gishu
+KE.45	Vihiga
+KE.46	Wajir
+KE.47	West Pokot
+LR.BG	Bong
+LR.BM	Bomi
+LR.CM	Grand Cape Mount
+LR.GB	Grand Bassa
+LR.GG	Grand Gedeh
+LR.GK	Grand Kru
+LR.GP	Gbarpolu
+LR.LO	Lofa
+LR.MG	Margibi
+LR.MO	Montserrado
+LR.MY	Maryland
+LR.NI	Nimba
+LR.RG	River Gee
+LR.RI	River Cess
+LR.SI	Sinoe
+LY.BA	Banghazi
+LY.BU	Al Butnan
+LY.DR	Darnah
+LY.GT	Ghat
+LY.JA	Al Jabal al Akhdar
+LY.JG	Al Jabal al Gharbi
+LY.JI	Al Jafarah
+LY.JU	Al Jufrah
+LY.KF	Al Kufrah
+LY.MB	Al Marqab
+LY.MI	Misratah
+LY.MJ	Al Marj
+LY.MQ	Murzuq
+LY.NL	Nalut
+LY.NQ	An Nuqat al Khams
+LY.SB	Sabha
+LY.SR	Surt
+LY.TB	Tarabulus
+LY.WA	Al Wahat
+LY.WD	Wadi al Hayat
+LY.WS	Wadi ash Shatiʾ
+LY.ZA	Az Zawiyah
+MA.01	Tanger-Tetouan
+MA.02	Gharb-Chrarda-Beni Hssen
+MA.03	Taza-Al Hoceima-Taounate
+MA.04	L'Oriental
+MA.05	Fes-Boulemane
+MA.06	Meknes-Tafilalet
+MA.07	Rabat-Sale-Zemmour-Zaer
+MA.08	Grand Casablanca
+MA.09	Chaouia-Ouardigha
+MA.10	Doukhala-Abda
+MA.11	Marrakech-Tensift-Al Haouz
+MA.12	Tadla-Azilal
+MA.13	Souss-Massa-Draa
+MA.14	Guelmim-Es Semara
+MA.15	Laayoune-Boujdour-Sakia el Hamra
+MA.16	Oued ed Dahab-Lagouira
+ML.1	Kayes
+ML.2	Koulikoro
+ML.3	Sikasso
+ML.4	Segou
+ML.5	Mopti
+ML.6	Tombouctou
+ML.7	Gao
+ML.8	Kidal
+ML.BKO	Bamako
+NG.AB	Abia
+NG.AD	Adamawa
+NG.AK	Akwa Ibom
+NG.AN	Anambra
+NG.BA	Bauchi
+NG.BE	Benue
+NG.BO	Borno
+NG.BY	Bayelsa
+NG.CR	Cross River
+NG.DE	Delta
+NG.EB	Ebonyi
+NG.ED	Edo
+NG.EK	Ekiti
+NG.EN	Enugu
+NG.FC	Abuja Federal Capital Territory
+NG.GO	Gombe
+NG.IM	Imo
+NG.JI	Jigawa
+NG.KD	Kaduna
+NG.KE	Kebbi
+NG.KN	Kano
+NG.KO	Kogi
+NG.KT	Katsina
+NG.KW	Kwara
+NG.LA	Lagos
+NG.NA	Nasarawa
+NG.NI	Niger
+NG.OG	Ogun
+NG.ON	Ondo
+NG.OS	Osun
+NG.OY	Oyo
+NG.PL	Plateau
+NG.RI	Rivers
+NG.SO	Sokoto
+NG.TA	Taraba
+NG.YO	Yobe
+NG.ZA	Zamfara
+SS.BN	Northern Bahr el Ghazal
+SS.BW	Western Bahr el Ghazal
+SS.EC	Central Equatoria
+SS.EE	Eastern Equatoria
+SS.EW	Western Equatoria
+SS.JG	Jonglei
+SS.LK	Lakes
+SS.NU	Upper Nile
+SS.UY	Unity
+SS.WR	Warrap
+TH.10	Bangkok
+TH.11	Samut Prakan
+TH.12	Nonthaburi
+TH.13	Pathum Thani
+TH.14	Phra Nakhon Si Ayutthaya
+TH.15	Ang Thong
+TH.16	Lop Buri
+TH.17	Sing Buri
+TH.18	Chai Nat
+TH.19	Saraburi
+TH.20	Chon Buri
+TH.21	Rayong
+TH.22	Chanthaburi
+TH.23	Trat
+TH.24	Chachoengsao
+TH.25	Prachin Buri
+TH.26	Nakhon Nayok
+TH.27	Sa Kaeo
+TH.30	Nakhon Ratchasima
+TH.31	Buri Ram
+TH.32	Surin
+TH.33	Si Sa Ket
+TH.34	Ubon Ratchathani
+TH.35	Yasothon
+TH.36	Chaiyaphum
+TH.37	Amnat Charoen
+TH.38	Bueng Kan
+TH.39	Nong Bua Lam Phu
+TH.40	Khon Kaen
+TH.41	Udon Thani
+TH.42	Loei
+TH.43	Nong Khai
+TH.44	Maha Sarakham
+TH.45	Roi Et
+TH.46	Kalasin
+TH.47	Sakon Nakhon
+TH.48	Nakhon Phanom
+TH.49	Mukdahan
+TH.50	Chiang Mai
+TH.51	Lamphun
+TH.52	Lampang
+TH.53	Uttaradit
+TH.54	Phrae
+TH.55	Nan
+TH.56	Phayao
+TH.57	Chiang Rai
+TH.58	Mae Hong Son
+TH.60	Nakhon Sawan
+TH.61	Uthai Thani
+TH.62	Kamphaeng Phet
+TH.63	Tak
+TH.64	Sukhothai
+TH.65	Phitsanulok
+TH.66	Phichit
+TH.67	Phetchabun
+TH.70	Ratchaburi
+TH.71	Kanchanaburi
+TH.72	Suphan Buri
+TH.73	Nakhon Pathom
+TH.74	Samut Sakhon
+TH.75	Samut Songkhram
+TH.76	Phetchaburi
+TH.77	Prachuap Khiri Khan
+TH.80	Nakhon Si Thammarat
+TH.81	Krabi
+TH.82	Phangnga
+TH.83	Phuket
+TH.84	Surat Thani
+TH.85	Ranong
+TH.86	Chumphon
+TH.90	Songkhla
+TH.91	Satun
+TH.92	Trang
+TH.93	Phatthalung
+TH.94	Pattani
+TH.95	Yala
+TH.96	Narathiwat
+TZ.01	Arusha
+TZ.02	Dar es Salaam
+TZ.03	Dodoma
+TZ.04	Iringa
+TZ.05	Kagera
+TZ.06	Kaskazini Pemba
+TZ.07	Kaskazini Unguja
+TZ.08	Kigoma
+TZ.09	Kilimanjaro
+TZ.10	Kusini Pemba
+TZ.11	Kusini Unguja
+TZ.12	Lindi
+TZ.13	Mara
+TZ.14	Mbeya
+TZ.15	Mjini Magharibi
+TZ.16	Morogoro
+TZ.17	Mtwara
+TZ.18	Mwanza
+TZ.19	Pwani
+TZ.20	Rukwa
+TZ.21	Ruvuma
+TZ.22	Shinyanga
+TZ.23	Singida
+TZ.24	Tabora
+TZ.25	Tanga
+TZ.26	Manyara
+TZ.27	Geita
+TZ.28	Katavi
+TZ.29	Njombe
+TZ.30	Simiyu
+VE.A	Distrito Federal
+VE.B	Anzoategui
+VE.C	Apure
+VE.D	Aragua
+VE.E	Barinas
+VE.F	Bolivar
+VE.G	Carabobo
+VE.H	Cojedes
+VE.I	Falcon
+VE.J	Guarico
+VE.K	Lara
+VE.L	Merida
+VE.M	Miranda
+VE.N	Monagas
+VE.O	Nueva Esparta
+VE.P	Portuguesa
+VE.R	Sucre
+VE.S	Tachira
+VE.T	Trujillo
+VE.U	Yaracuy
+VE.V	Zulia
+VE.W	Dependencias Federales
+VE.X	Vargas
+VE.Y	Delta Amacuro
+VE.Z	Amazonas
+YE.AB	Abyan
+YE.AD	'Adan
+YE.AM	'Amran
+YE.BA	Al Bayda'
+YE.DA	Ad Dali'
+YE.DH	Dhamar
+YE.HD	Hadramawt
+YE.HJ	Hajjah
+YE.HU	Al Hudaydah
+YE.IB	Ibb
+YE.JA	Al Jawf
+YE.LA	Lahij
+YE.MA	Ma'rib
+YE.MR	Al Mahrah
+YE.MW	Al Mahwit
+YE.RA	Raymah
+YE.SA	Amanat al 'Asimah
+YE.SD	Saʻdah
+YE.SH	Shabwah
+YE.SN	Sanʻa'
+YE.TA	Ta'izz

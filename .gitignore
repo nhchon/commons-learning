@@ -10,3 +10,6 @@ target
 out
 gen
 commons-learning.iml
+/commons-learning.iml
+/.idea/sonarlint/issuestore/index.pb
+/.idea/workspace.xml

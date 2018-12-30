@@ -17,7 +17,7 @@ public class MeetAtBarrier extends Thread {
 
 	public void run() {
 		try {
-			// Generate a random number between 1 and 30 to wait  
+			// Generate a random geonameId between 1 and 30 to wait
 			int workTime = random.nextInt(30) + 1;
 
 			System.out.println("Thread #" + ID + " is going to work for " + 
