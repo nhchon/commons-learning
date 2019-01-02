@@ -12,23 +12,53 @@ import java.util.Calendar;
 
 public class JsoupParseCountryCodeExample {
     public static void main(String[] args) {
-//        System.out.println(parseNationalCode("787, or 939"));
-//        System.out.println(parseNationalCode("264 (ANG)"));
-//        System.out.println(parseNationalCode("268 (ANT)"));
-//        System.out.println(parseNationalCode("242 (BAH)"));
-//        System.out.println(parseNationalCode("246"));
-//        System.out.println(parseNationalCode("767 (ROS)"));
-//        System.out.println(parseNationalCode("809, 829, 849"));
-//        System.out.println(parseNationalCode("6, or 7"));
-//        System.out.println(parseNationalCode("664 (MOI)"));
-//        System.out.println(parseNationalCode("787, or 939"));
-//        System.out.println(parseNationalCode("284 (BVI)"));
-//        System.out.println(parseNationalCode("809, 829, 849"));
-//
-//        System.out.println("".split(",").length);
-//        System.out.println("809,829,849".split(",").length);
+//        doBusiness();
+        updateCountryCode();
+    }
 
-        doBusiness();
+    public static void updateCountryCode() {
+        try {
+            // create a mysql database connection
+            Connection conn = getConnection();
+
+            // the mysql insert statement
+            String query = "UPDATE country_data " +
+                    "SET alpha_2=?, alpha_3=?, un_code=? WHERE name=?";
+
+            // create the mysql insert preparedstatement
+            PreparedStatement preparedStmt = conn.prepareStatement(query);
+
+            Document doc = Jsoup.connect("https://www.nationsonline.org/oneworld/country_code_list.htm")
+                    .userAgent("Mozilla/5.0")
+                    .timeout(10 * 1000).get();
+            Elements tables = doc.select("table");
+            System.out.println(tables.size());
+
+            for (int i = 0; i < tables.size(); i++) {
+                Element table = tables.get(i);
+                Elements rows = table.select("tr");
+                // first row is the col names so skip it.
+                for (int r = 1; r < rows.size(); r++) {
+                    Elements tds = rows.get(r).select("td");
+                    if (tds.size() > 2) {
+                        String name = tds.get(1).text();
+                        String alpha2 = tds.get(2).text();
+                        String alpha3 = tds.get(3).text();
+                        String unCode = tds.get(4).text();
+                        System.out.println(name + " " + alpha2 + " " + alpha3 + " " + unCode);
+                        preparedStmt.setString (1, alpha2);
+                        preparedStmt.setString (2, alpha3);
+                        preparedStmt.setString (3, unCode);
+                        preparedStmt.setString (4, name);
+                        // execute the preparedstatement
+                        preparedStmt.execute();
+                    }
+                }
+            }
+            conn.close();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 
     public static String parseNationalCode(String s) {
@@ -40,17 +70,18 @@ public class JsoupParseCountryCodeExample {
         return s.replaceAll("[^0-9,]","");
     }
 
+    public static Connection getConnection() throws Exception {
+        // create a mysql database connection
+        String myDriver = "com.mysql.jdbc.Driver";
+        String myUrl = "jdbc:mysql://localhost/text2talent";
+        Class.forName(myDriver);
+        return DriverManager.getConnection(myUrl, "root", "qaz123wsx");
+    }
+
     public static void doBusiness() {
         try {
             // create a mysql database connection
-            String myDriver = "com.mysql.jdbc.Driver";
-            String myUrl = "jdbc:mysql://localhost/text2talent";
-            Class.forName(myDriver);
-            Connection conn = DriverManager.getConnection(myUrl, "root", "qaz123wsx");
-
-            // create a sql date object so we can use it in our INSERT statement
-            Calendar calendar = Calendar.getInstance();
-            java.sql.Date startDate = new java.sql.Date(calendar.getTime().getTime());
+            Connection conn = getConnection();
 
             // the mysql insert statement
             String query = "INSERT INTO country_data(" +
@@ -110,6 +141,5 @@ public class JsoupParseCountryCodeExample {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-
     }
 }
